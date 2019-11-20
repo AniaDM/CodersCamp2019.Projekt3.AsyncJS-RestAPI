@@ -22,6 +22,9 @@ Pokazany został tylko jeden tryb i jedno pytanie. Cała reszta działa analogic
 - przeszukiwane są wyniki działania GoogleVision dla zdjęcia, czy któryś z nich pokrywa się z odpowiedzią (ustalić stopień podobieństwa, np. odpowiedź to może być Jabba, a Google API zwróci "Jabba The Hutt")
 7. Po ukończeniu czasu wynik gracza zapisywany jest w rankingu dla danej przeglądarki (LocalStorage) i pokazywany jest ranking 3 najlepszych wyników.
 
+## Możliwe usprawnienia i dodatkowe funkcjonalności:
+1. Wykorzystanie Speech Recognition API i wyszukiwanie odpowiedzi jaką gracz wypowiedział zamiast klikania w przycisk z odpowiedzią.
+
 
 ## Technologie do wykorzystania:
 - JavaScript / TypeScript + Node.js
