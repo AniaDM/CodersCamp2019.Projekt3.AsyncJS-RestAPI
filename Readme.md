@@ -13,7 +13,7 @@ Pokazany został tylko jeden tryb i jedno pytanie. Cała reszta działa analogic
 1. Wybór trybu quizu (People, Vehicles, Spaceships)
 2. Opis zasad dla quizu. Obok zasad pokazuje się losowe zdjęcie z danego trybu (dostosowany opis, jeśli np. imię osoby ze zdjęcia jest w opisie zasad).
 3. Po rozpoczęciu gry rozpoczyna się odliczanie czasu (2 minut).
-4. Zadaniem gracza jest odpowiedzieć na jak najwięcej pytań w ciągu ustalonego czasu. W trakcie trwania quizu miecz świetlny pokazuje ile jeszcze czasu zostało. Po wybraniu odpowiedzi zostaje ukazane przez sekundę czy odpowiedź była dobra czy zła. Następnie pytanie zostaje zmienione na kolejne i tak do końca czasu.
+4. Zadaniem gracza jest odpowiedzieć na jak najwięcej pytań w ciągu ustalonego czasu. W trakcie trwania quizu miecz świetlny pokazuje ile jeszcze czasu zostało. Po wybraniu odpowiedzi zostaje ukazane przez sekundę czy odpowiedź była dobra czy zła. Następnie pytanie zostaje zmienione na kolejne (prototyp pokazuje jedynie 1 pytanie) i tak do końca czasu.
 5. Pytania są generowane w następujący sposób: 
 - zostaje pobrane zdjęcie z danego trybu
 - losowane są 4 odpowiedzi z calla do api (dla People) będzie to: https://swapi.co/api/people
