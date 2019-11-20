@@ -1,6 +1,6 @@
 ### Quiz Star Wars
 
-Coders Camp (coderscamp.edu.pl) - projekt 3. Wykorzystanie asynchornicznego JavaScript oraz korzystanie z REST API.
+Coders Camp (coderscamp.edu.pl) - projekt 3. Wykorzystanie asynchronicznego JavaScript oraz korzystanie z REST API.
 
 ## Działanie aplikacji:
 
