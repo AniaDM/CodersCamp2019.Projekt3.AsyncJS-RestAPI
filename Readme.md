@@ -8,6 +8,9 @@ https://www.figma.com/proto/L3XaDSR7whIjiZVw2HI0gO/CodersCamp2019_Projekt3_Async
 
 Pokazany został tylko jeden tryb i jedno pytanie. Cała reszta działa analogicznie.
 
+Projekt: https://www.figma.com/file/L3XaDSR7whIjiZVw2HI0gO/CodersCamp2019_Projekt3_AsyncJS-and-REST?node-id=0%3A1
+Może się przydać do odczytania np. cieni i kolorów. Nie zwracajcie uwagi na jednostki w px, należy użyć jednostek responsywnych.
+
 ## Działanie aplikacji:
 
 1. Wybór trybu quizu (People, Vehicles, Spaceships)
