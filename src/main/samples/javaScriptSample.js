@@ -1,4 +1,4 @@
-import {TypeScriptClass} from "./sample1";
+import {TypeScriptClass} from "./typeScriptSample";
 
 export class JavaScriptClass {
 
