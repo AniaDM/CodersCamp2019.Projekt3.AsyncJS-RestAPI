@@ -4,17 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Star Wars quiz</title>
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="quizBackground.css
+    " rel="stylesheet" type="text/css">
+    
 </head>
 <body>
-    <div class="wrapperSword">
-        <div class="swordTimer"></div>
-        <div class="swordNormal"></div>
+    <div class="main-wrapper">
+            <!-- <img src="pictures/QuizBackground.png" alt="Tło SW"> -->
+        <div class="wrapper-center">
+
+            <img class = "star-wars-logo" src="pictures/StarWarsLogo.png" alt = "logo Star Wars" />
+            <div class = "game-selection"></div>
+            <img class = "lord-vader-pic" src="pictures/4.jpg" alt="Lord Vader" />
+            <section class = "question-menu">
+                <div class = "question">Question</div>
+                <div class = "odpowiedz">111</div>
+                <div class = "odpowiedz">222</div>
+                <div class = "odpowiedz">333</div>
+                <div class = "odpowiedz">444</div>
+            </section>
+        </div>
+        <div class="wrapper-sword">
+            <div class="sword-normal"></div>
+            <div class="sword-timer"></div>
+        </div>
+        <div id='timer'><p>______</p></div>
     </div>
-
-    <p id='timer'>______</p>
-
     <script src="timer.js"></script>
     
 </body>

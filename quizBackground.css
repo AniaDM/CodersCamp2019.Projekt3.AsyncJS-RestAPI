@@ -1,0 +1,25 @@
+.main-wrapper {
+    background-image: url('pictures/QuizBackground');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /* background-image: url('pictures/QuizBackground.png'); */
+}
+.star-wars-logo>img {
+    border: 10px solid #333222;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+}
+.wrapper-centre {
+    border: 10px solid wheat;
+}
+
+.game-selection {
+    background: #FFFFFF;
+    box-shadow: 4px 4px 40px rgba(255, 0, 0, 0.9), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+}
+.question-menu {
+    
+}
