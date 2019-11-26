@@ -18,7 +18,7 @@ export class JavaScriptClass {
     }
 
 }
-//
+////
 export function test(){
 
     const typeScriptObjectValid = new TypeScriptClass(
