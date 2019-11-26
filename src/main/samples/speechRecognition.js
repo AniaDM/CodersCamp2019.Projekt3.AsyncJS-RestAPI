@@ -7,7 +7,7 @@ recognition.addEventListener('result', e=>{
 
     const transcript = Array.from(e.results).map(result=>result[0]).map(result=>result.transcript).join('').toLowerCase();
 
-                if (transcript == /*CORRECT ANSWER*/){
+                if (transcript == /*CORRECT ANSWER*/ ){
                  /////////////CORRECT ANSWER+1
                 }
 
