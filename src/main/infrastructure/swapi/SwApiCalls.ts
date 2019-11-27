@@ -20,8 +20,8 @@ export function handleErrors(response: Response) {
 const FIRST_PERSON_ID = 1;
 const LAST_PERSON_ID = 88;
 
-export async function randomPerson(): Promise<Person> {
-    return await fetch(`${SW_API_PEOPLE_URL}${getRandomIntInclusive(FIRST_PERSON_ID, LAST_PERSON_ID)}`)
+export function randomPerson(): Promise<Person> {
+    return fetch(`${SW_API_PEOPLE_URL}${getRandomIntInclusive(FIRST_PERSON_ID, LAST_PERSON_ID)}`)
         .then(handleErrors)
         .then(res => res.json())
 }
