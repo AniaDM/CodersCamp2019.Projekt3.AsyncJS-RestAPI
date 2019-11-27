@@ -58,6 +58,8 @@ const answers = [];
 
 console.log(questions[0].getAnswers());
 
+const button = '';
+
 button.addEventListener('click', e => {
-    answers.push(new UserAnswer(question[1], 2));
+    answers.push(new UserAnswer(question, userAnswer));
 })
