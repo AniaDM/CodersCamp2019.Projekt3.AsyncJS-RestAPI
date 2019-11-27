@@ -1,58 +1,65 @@
+function rand(min, max, answerId) {
+    min = parseInt(min, 10);
+    max = parseInt(max, 10);
 
-export function rand( min, max, answerId ){
-        min = parseInt( min, 10 );
-        max = parseInt( max, 10 );
-    
-        if ( min > max ){
-            var tmp = min;
-            min = max;
-            max = tmp;
-        }
-        
-        let number = Math.floor( Math.random() * ( max - min + 1 ) + min )
+    if (min > max) {
+        var tmp = min;
+        min = max;
+        max = tmp;
+    }
 
-        for (let i=0; number === answerId; i++) {
-            number = Math.floor( Math.random() * ( max - min + 1 ) + min )
-        }
+    let number = Math.floor(Math.random() * (max - min + 1) + min)
 
-        return number
+    for (let i = 0; number === answerId; i++) {
+        number = Math.floor(Math.random() * (max - min + 1) + min)
+    }
+
+    return number
 }
 
+const idOfFirstPerson = 1
+const idOfLastPerson = 87
 
-export async function threeRandomNames(answer) {
-    //jak znaleźć id do podanego name? (gdybym znała id poprawnej odpowiedzi mogłabym wykluczyć ją w losowaniu złych odp)
+export function threeRandomNames(answer) {
 
-    const min = 1
-    const max = 87
-
-    const firstId = rand(min, max, answerId)
-    const secondId = function(firstId) {
-        let number = rand(min, max, answerId)
-        for (let i=0; number === firstId; i++) {
-            number = Math.floor( Math.random() * ( max - min + 1 ) + min )
-        }
-        return number
-    }
-    const thirdId = function(firstId, secondId) {
-        let number = rand(min, max, answerId)
-        for (let i=0; number === firstId || number === secondId; i++) {
-            number = Math.floor( Math.random() * ( max - min + 1 ) + min )
-        }
-        return number
+    let answerId
+    if (typeof answer === 'number') {
+        answerId = answer
+    } else if (typeof answer === 'string') {
+        answerId = fetch('https://swapi.co/api/people/?search=' + answer)
+            .then(resp => resp.json())
+            .then(resp => {
+                if (resp.url.length === 30) {
+                    return resp.url[28]
+                } else if (resp.url.length === 31) {
+                    return resp.url.substr(28, 2)
+                }
+            })
     }
 
+    const setOfPeopleId = new Set()
+    for (let i = 0; setOfPeopleId.size < 3; i++) {
+        setOfPeopleId = setOfPeopleId.add(rand(idOfFirstPerson, idOfLastPerson, answerId))
+    }
 
-    const nameOne = await fetch('https://swapi.co/api/people/'+firstId+'/')
-	                    .then(resp => resp.json())
-                        .then(resp => {return resp.name})
+    const arrayOfPeopleId = Array.from(setOfPeopleId)
 
-    const nameTwo = await fetch('https://swapi.co/api/people/'+secondId+'/')
-	                    .then(resp => resp.json())
-                        .then(resp => {return resp.name})
+    const firstId = arrayOfPeopleId[0]
+    const secondId = arrayOfPeopleId[1]
+    const thirdId = arrayOfPeopleId[2]
 
-    const nameThree = await fetch('https://swapi.co/api/people/'+thirdId+'/')
-	                    .then(resp => resp.json())
-                        .then(resp => {return resp.name})
-    const names = [nameOne, nameTwo, nameThree]                       
+    const nameOne = fetch('https://swapi.co/api/people/' + firstId + '/')
+        .then(resp => resp.json())
+        .then(resp => resp.name)
+
+    const nameTwo = fetch('https://swapi.co/api/people/' + secondId + '/')
+        .then(resp => resp.json())
+        .then(resp => resp.name)
+
+    const nameThree = fetch('https://swapi.co/api/people/' + thirdId + '/')
+        .then(resp => resp.json())
+        .then(resp => resp.name)
+
+    const names = [nameOne, nameTwo, nameThree]
     return names
 }
