@@ -10,15 +10,15 @@ export default class Starship extends Mode {
     getRandomIndex(length) {
         return Math.floor(Math.random() * length);
     }
-    async getNameForId(id) {
+    async getStarshipForId(id) {
         return await fetch(URL + id).then((response) => response.json()).then(res => res.name);
     }
-    getRandomPersonForModeView() {
-        const idOfResource=this.listOfResources.splice(this.getRandomIndex(this.listOfResources.length),1);
-        const name=this.getNameForId(idOfResource);
-        return { name , idOfResource};
+    getRandomStarshipForModeView() {
+        const idOfStarship=this.listOfResources.splice(this.getRandomIndex(this.listOfResources.length),1);
+        const starship=this.getStarshipForId(idOfStarship);
+        return { starship , idOfStarship};
     }
-    async getThreeRandomPersons(){
+    async getThreeRandomStarships(){
         const clonedListOfResources=this.listOfResources.slice();
            return await Promise.all([
             fetch(URL + clonedListOfResources.splice(this.getRandomIndex(clonedListOfResources.length),1)).then((response) => response.json()).then(res => res.name),
