@@ -7,22 +7,15 @@ export default class Starship extends Mode {
         super();
         this.listOfResources = LIST;
     }
-    getRandomId() {
-        return Math.floor(Math.random() * this.listOfResources.length);
+    getRandomIndex(length) {
+        return Math.floor(Math.random() * length);
     }
-    async getNameForId(id) {
-        const response = await fetch(this.URL + id + "/")
-        const json = await response.json().then(res => res.name);
-        console.log(json);
-        return json;
+    async getStarshipForId(id) {
+        return await fetch(URL + id).then((response) => response.json()).then(res => res.name);
     }
-    getRandomPersonForModeView() {
-        const num = this.getRandomId();
-        const photo = getNameForId(this.listOfResource[num]);
-        this.removeItem(num);
-        return {
-            photo,
-            num
-        };
+    getRandomStarshipForModeView() {
+        const idOfStarship=this.listOfResources.splice(this.getRandomIndex(this.listOfResources.length),1);
+        const starship=this.getStarshipForId(idOfStarship);
+        return { starship , idOfStarship};
     }
 }
