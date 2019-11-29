@@ -11,7 +11,7 @@ export default class People extends Mode {
         super(playtime);
         this.listOfResources = this.getListOfResources();
     }
-   
+
     getListOfResources() {
         const tab = []
         for (let i = 0; i < 89; i++) {
@@ -27,3 +27,4 @@ export default class People extends Mode {
     }
    
 }
+ 
