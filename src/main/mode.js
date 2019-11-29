@@ -6,9 +6,7 @@ export default class Mode {
         }
         this.playtime=playtime;
     }
-    getGameMode(){
-        return this.TITLE_MODE;
-     }
+   
      getPlayTime(){
          return this.playtime;
      }
