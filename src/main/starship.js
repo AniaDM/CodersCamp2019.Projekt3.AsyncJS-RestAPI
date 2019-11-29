@@ -14,8 +14,8 @@ export default class Starship extends Mode {
         return await fetch(URL + id).then((response) => response.json()).then(res => res.name);
     }
     getRandomStarshipForModeView() {
-        const idOfStarship=this.listOfResources.splice(this.getRandomIndex(this.listOfResources.length),1);
-        const starship=this.getStarshipForId(idOfStarship);
-        return { starship , idOfStarship};
+        const id=this.listOfResources.splice(this.getRandomIndex(this.listOfResources.length),1);
+        const name=this.getStarshipForId(idOfStarship);
+        return { name , id};
     }
 }
