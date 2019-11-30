@@ -30,12 +30,12 @@ function extractIdFromUrl(answer) {
             }
         })
 }
-
 export function threeRandomNamesExpectOf(answer) {
 
+
     const answerId = (typeof answer === 'number') ?
+        extractIdFromUrl(answer)
         answer :
-        extractIdFromUrl(answer);
 
     const setOfPeopleId = new Set()
     for (let i = 0; setOfPeopleId.size < 3; i++) {
