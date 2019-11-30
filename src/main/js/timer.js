@@ -16,12 +16,9 @@ function setup () {
         counter++;
         timer.textContent = `Time Left: ${(timeleft - counter)}`;
             widthTimer -=1.666;
-            
-            console.log(` ${widthNormal} %`);
-            
+
             swordTimer.style.width = `${widthTimer}%`;
-         
-            
+
         if (counter === timeleft) {
             clearInterval(interval);
             counter = 0;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,31 +8,40 @@
     <title>Star Wars quiz</title>
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/quizBackground.css" rel="stylesheet" type="text/css">
-    
+
 </head>
+
 <body>
     <div class="main-wrapper">
-            <!-- <img src="././" alt="Tło SW"> -->
+        <!-- <img src="././" alt="Tło SW"> -->
         <div class="wrapper-center">
 
-            <img class = "star-wars-logo" src="../../assets/ui/StarWarsLogo.png" alt = "logo Star Wars" />
-            <div class = "game-selection"></div>
-            <img class = "lord-vader-pic" src="../../assets/img/modes/people/4.jpg" alt="Lord Vader" />
-            <section class = "question-menu">
-                <div class = "question">Question</div>
-                <div class = "odpowiedz">111</div>
-                <div class = "odpowiedz">222</div>
-                <div class = "odpowiedz">333</div>
-                <div class = "odpowiedz">444</div>
+            <img class="star-wars-logo" src="../../assets/ui/StarWarsLogo.png" alt="logo Star Wars" />
+            <div class="game-selection"></div>
+            <img class="lord-vader-pic" src="../../assets/img/modes/people/4.jpg" alt="Lord Vader" />
+            <section class="question-menu">
+                <div class="question">Question: Who is this character?</div>
+                <div class="answer answer1 answer-green">111</div>
+                <div class="answer answer2">222</div>
+                <div class="answer answer3">333</div>
+                <div class="answer answer4">444</div>
             </section>
         </div>
+        <!-- <img class="light-saber-handle" src="../../assets/ui/lightsaberhandle.png"> -->
         <div class="wrapper-sword">
-            <div class="sword-normal"></div>
-            <div class="sword-timer"></div>
+            <div><img class="light-saber-handle" src="../../assets/ui/lightsaberhandle.png"></div>
+            
+            <div class='test'>
+                <div class="sword-normal"></div>
+                <div class="sword-timer"></div>
+            </div>
         </div>
         <p id="timer">______</p>
-    
-    <script src="js/timer.js"></script>
-    
+
+        <script src="js/timer.js"></script>
+        <!-- <script src="js/chengePic.js"></script> -->
+        <script src="js/QuestionModule.js"></script>
+        <!-- <script src="js/vehicles.js"></script> -->
 </body>
+
 </html>

@@ -1,64 +1,88 @@
-
 var peopleRanking = JSON.parse(localStorage.getItem('peopleRanking')) || [];
-var vehicleRanking = JSON.parse(localStorage.getItem('peopleRanking')) || [];
-var spaceshipRanking = JSON.parse(localStorage.getItem('peopleRanking')) || [];
+var vehicleRanking = JSON.parse(localStorage.getItem('vehicleRaking')) || [];
+var spaceshipRanking = JSON.parse(localStorage.getItem('spaceshipRanking')) || [];
 
-var sortedpeopleRanking =[];
-var sortedvehicleRanking =[];
-var sortedSpaceShipRanking =[];
+var sortedpeopleRanking = [];
+var sortedvehicleRanking = [];
+var sortedSpacehipRanking = [];
 
 
-const gameMode ='1';
-
-class Ranking{
-    constructor(nickName, correctAnswers, numberofQuestions){
-            
-            this.nickName = nickName;
-            this.correctAnswers = correctAnswers;
-            this.numberofQuestions = numberofQuestions;
-           
-    }
-  
-        pushPlayertoArray(){
-       
-              if(gameMode==1){
-             
-              peopleRanking.push(player);
-              sortedpeopleRanking.push(player);
-              localStorage.setItem('PeopleRanking', JSON.stringify(peopleRanking));
-
-              sortedpeopleRanking.sort(function(a,b){
-              return b.correctAnswers - a.correctAnswers
-              })
-             
-              }
-               
-                else if(gameMode==2){
-
-                vehicleRanking.push(player);
-                sortedvehicleRanking.push(player);
-                localStorage.setItem('vehicleRanking', JSON.stringify(vehicleRanking));
-
-                sortedvehicleRanking.sort(function(a,b){
-                return b.correctAnswers - a.correctAnswers
-                })}
-              
-                else{
-                  spaceshipRanking.push(player);
-                  sortedSpaceShipRanking.push(player);
-
-                  localStorage.setItem('spaceshipRanking', JSON.stringify(spaceshipRanking));
-
-                  sortedSpaceShipRanking.sort(function(a,b){
-                    return b.correctAnswers - a.correctAnswers;
-                  })
-                }
-          
-        }
-  
+const gameMode = {
+    
+    PEOPLE:"PEOPLE", 
+    VEHICLES:"VEHICLES", 
+    SPACESHIPS:"SPACESHIPS" 
 }
 
-// var player = new Ranking("jan",39,40,Ranking.prototype.pushPlayertoArray());
-// var player = new Ranking("marek",29,40,Ranking.prototype.pushPlayertoArray());
-// var player = new Ranking("olek",19,40,Ranking.prototype.pushPlayertoArray());
+let currentMode = gameMode.PEOPLE;
 
+class RankingEntry {
+    
+    
+
+    constructor(nickName, correctAnswers, numberofQuestions) {
+       
+        this.nickName = nickName;
+        this.correctAnswers = correctAnswers;
+        this.numberofQuestions = numberofQuestions;
+
+    }
+
+    pushPlayertoArray() {
+     
+
+        switch(currentMode){
+            case gameMode.PEOPLE:
+                
+                    peopleRanking.push(player);
+                    sortedpeopleRanking.push(player);
+                    localStorage.setItem('peopleRanking', JSON.stringify(peopleRanking));
+                    sortedpeopleRanking.sort(function (a, b) {
+                        return b.correctAnswers - a.correctAnswers
+                    })
+              
+                break; 
+        }
+        
+        switch(currentMode){
+            case gameMode.VEHICLES:
+
+                    vehicleRanking.push(player);
+                    sortedvehicleRanking.push(player);
+                    localStorage.setItem('vehicleRanking', JSON.stringify(vehicleRanking));
+                    sortedvehicleRanking.sort(function (a, b) {
+                        return b.correctAnswers - a.correctAnswers
+                    })
+               
+                break; 
+        }
+
+
+        switch(currentMode){
+            case gameMode.SPACESHIPS:
+    
+            spaceshipRanking.push(player);
+            sortedSpacehipRanking.push(player);
+
+            localStorage.setItem('spaceshipRanking', JSON.stringify(spaceshipRanking));
+
+            sortedSpacehipRanking.sort(function (a, b) {
+                return b.correctAnswers - a.correctAnswers;
+            })
+
+                break; 
+        }
+
+
+            
+        
+      
+        
+
+    }
+
+}
+
+// var player = new RankingEntry("jan", 39, 40, RankingEntry.prototype.pushPlayertoArray());
+// var player = new RankingEntry("marek", 29, 40, RankingEntry.prototype.pushPlayertoArray());
+// var player = new RankingEntry("olek", 19, 40, RankingEntry.prototype.pushPlayertoArray());
