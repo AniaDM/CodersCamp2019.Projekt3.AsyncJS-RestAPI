@@ -31,16 +31,17 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
-    "awesome-typescript-loader": "^5.2.1",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/polyfill": "^7.6.0",
     "@babel/register": "^7.6.2",
-    "chai": "^4.2.0",
-    "lodash": "^4.17.15",
-    "mocha": "^6.2.2",
     "@types/chai": "^4.2.5",
     "@types/lodash": "^4.14.149",
     "@types/mocha": "^5.2.7",
+    "@types/node-fetch": "^2.5.4",
+    "awesome-typescript-loader": "^5.2.1",
+    "chai": "^4.2.0",
+    "lodash": "^4.17.15",
+    "mocha": "^6.2.2",
     "source-map-loader": "^0.2.4",
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.2"
