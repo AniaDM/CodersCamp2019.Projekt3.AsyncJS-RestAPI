@@ -1,7 +1,7 @@
-const answerV1 = document.querySelector('.answer1');
-const answerV2 = document.querySelector('.answer2');
-const answerV3 = document.querySelector('.answer3');
-const answerV4 = document.querySelector('.answer4');
+const answer1 = document.querySelector('.answer1');
+const answer2 = document.querySelector('.answer2');
+const answer3 = document.querySelector('.answer3');
+const answer4 = document.querySelector('.answer4');
 
 class ItemAnswer {
     constructor(vehicleChange) {
@@ -35,12 +35,12 @@ arrangementTable[randomNumber] = answerSet.answer3BadAnswer;
 
 arrangementTable[randomNumber] = answerSet.answer4BadAnswer;
 
-answerV1.innerText = arrangementTable[0];
-answerV2.innerText = arrangementTable[1];
-answerV3.innerText = arrangementTable[2];
-answerV4.innerText = arrangementTable[3];
+answer1.innerText = arrangementTable[0];
+answer2.innerText = arrangementTable[1];
+answer3.innerText = arrangementTable[2];
+answer4.innerText = arrangementTable[3];
 
-answerV1.style.color = 'black';
-answerV2.style.color = 'black';
-answerV3.style.color = 'black';
-answerV4.style.color = 'black';
+answer1.style.color = 'black';
+answer2.style.color = 'black';
+answer3.style.color = 'black';
+answer4.style.color = 'black';
