@@ -34,7 +34,7 @@ export function threeRandomNamesExpectOf(answer) {
 
 
     const answerId = (typeof answer === 'number') ?
-        extractIdFromUrl(answer);
+        extractIdFromUrl(answer)
         answer :
 
     const setOfPeopleId = new Set()
