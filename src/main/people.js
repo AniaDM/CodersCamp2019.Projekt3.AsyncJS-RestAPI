@@ -2,7 +2,7 @@ import Mode from './mode';
 
 const TITLE_MODE = 'MODE: Who is this character?';
 const URL = 'https://swapi.co/api/people/';
-const ASSETS = '../../assets/img/modes/people/'
+export const ASSETS = '../../assets/img/modes/people/';
 const MINUTES = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
 
 
@@ -25,6 +25,6 @@ export default class People extends Mode {
         let str = this.playtime > 1 ? 's' : '';
         return `You have ${MINUTES[this.playtime]} minute${str} (${this.playtime}m) to answer as many questions as possible.During the game on each question you need to select who from Star Wars is showed on the left(${nameOfCharacter}) from available options, or select that the character is none above.`;
     }
-   
+
 }
- 
+
