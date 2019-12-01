@@ -1,4 +1,5 @@
 import {TypeScriptClass} from "./typeScriptSample";
+import {randomPerson} from "../infrastructure/swapi/SwApiCalls";
 
 export class JavaScriptClass {
 
@@ -19,7 +20,7 @@ export class JavaScriptClass {
 
 }
 
-export function test(){
+export function test() {
 
     const typeScriptObjectValid = new TypeScriptClass(
         {
@@ -38,5 +39,8 @@ export function test(){
         "CC"
     );
     console.log(typeScriptObjectInvalid);
+
+    randomPerson()
+        .then(person => console.log("Random person:", person));
 }
 
